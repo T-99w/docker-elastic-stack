@@ -6,7 +6,7 @@ RUN apk add --no-cache openjdk17-jre tini su-exec
 
 ENV STACK 8.2.3
 
-RUN apk add --no-cache libzmq bash nodejs nginx apache2-utils openssl nss libc6-compat
+RUN apk add libzmq bash nodejs nginx apache2-utils openssl nss libc6-compat
 RUN mkdir -p /usr/local/lib \
 	&& ln -s /usr/lib/*/libzmq.so.3 /usr/local/lib/libzmq.so \
 	&& ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
